@@ -23,12 +23,11 @@ class Hobbit {
   }
 
   getRing(){
-    if (this.name = 'Frodo'){
+    if (this.name === 'Frodo'){
       this.hasRing = true
-    }
-    if (this.hasRing = true){
       return 'Here is the ring!'
-    } else {
+    }
+    if (this.name !== 'Frodo'){
       return'You can\'t have it!'
     }
     }

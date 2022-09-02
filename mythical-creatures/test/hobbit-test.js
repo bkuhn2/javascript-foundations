@@ -78,8 +78,7 @@ describe('Hobbit', function() {
 
     assert.equal(hobbit1.getRing(), 'Here is the ring!');
     assert.equal(hobbit1.hasRing, true);
-console.log(hobbit1);
-console.log(hobbit2);
+
     assert.equal(hobbit2.getRing(), 'You can\'t have it!');
     assert.equal(hobbit2.hasRing, false);
   });
