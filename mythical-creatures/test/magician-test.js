@@ -100,14 +100,14 @@ describe('Magician', function() {
     assert.equal(magician.performShowStopper(), 'WOW! The magician totally just sawed that person in half!');
   });
 
-  it.skip('should not be able to saw someone in half unless they have an assistant', function () {
+  it('should not be able to saw someone in half unless they have an assistant', function () {
     var magician1 = new Magician({ name: 'Scott', assistant: false });
     var magician2 = new Magician({ name: 'Hannah', assistant: true });
 
     assert.equal(magician1.performShowStopper(), 'Oh no, this trick is not ready!');
     assert.equal(magician2.performShowStopper(), 'Oh no, this trick is not ready!');
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 100; i++) {
       magician1.performTrick();
       magician2.performTrick();
     }

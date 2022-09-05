@@ -15,17 +15,25 @@ class Magician {
   }
 
   performTrick(){
-    if (this.favoriteAccessory === "top hat"){
+    if (this.favoriteAccessory === "top hat" && this.confidencePercentage < 100){
       this.confidencePercentage += 10
       return "PULL RABBIT FROM TOP HAT"
-    } else {
+    } else if (this.favoriteAccessory === "top hat"){
+      return "PULL RABBIT FROM TOP HAT"
+    }
+
+    if (this.confidencePercentage < 100) {
       this.confidencePercentage += 10
+      return "PULL DOVE FROM SLEEVE"
+    } else {
       return "PULL DOVE FROM SLEEVE"
     }
   }
 
   performShowStopper(){
-    if (this.confidencePercentage < 100 && this.assistant === false){
+    if (this.confidencePercentage < 100) {
+      return "Oh no, this trick is not ready!"
+    } else if (this.assistant === false) {
       return "Oh no, this trick is not ready!"
     } else {
       return "WOW! The magician totally just sawed that person in half!"
