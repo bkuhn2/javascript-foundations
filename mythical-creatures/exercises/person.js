@@ -1,7 +1,11 @@
 class Person {
-  constructor(name){
+  constructor(name, mood){
   this.name = name;
-  this.mood = "frightened"
+  if (mood === undefined){
+    this.mood = "frightened";
+  } else {
+    this.mood = mood;
+  }
   }
 }
 
