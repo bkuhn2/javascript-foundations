@@ -14,9 +14,9 @@ class Medusa {
       this.statues.push(statue);
     } else {
       this.statues.push(statue);
-      var freedStatue = this.statues.shift();
-      var freedPerson = new Person(freedStatue.name, "relieved")
-      return freedPerson
+      // var freedStatue = this.statues.shift();
+      return new Person(this.statues.shift().name, "relieved")
+      // return freedPerson
     }
   }
 }
