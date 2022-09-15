@@ -6,9 +6,22 @@ class Ogre {
     } else {
       this.home = ogre.abode;
     }
+    this.swings = 0;
   }
   encounter(human) {
     human.encounterCounter ++
+    if (human.noticesOgre() === true) {
+      this.swingAt();
+    }
+    if (this.swings === 2) {
+      human.knockedOut = true;
+    }
+  }
+  swingAt(human) {
+    this.swings ++
+  }
+  apologize(human) {
+    human.knockedOut = false;
   }
 }
 
